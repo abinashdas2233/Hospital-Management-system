@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/patientnav.css}">
+    <title>Document</title>
+    <style>
+          body {
+       font-family: Arial, sans-serif;
+       background-color: #0f83a7ea;
+   }
+   table{
+    margin-left: 20%;
+    margin-top: 10%;
+    border-style: groove;
+    color: #111000;
+   }
+   th{
+    background-color: white;
+   }
+   tbody{
+    background-color: yellow;
+   }
+    </style>
+</head>
+<body>
+  
+
+    <div th:include="adminnav::adminnav"></div>
+ <div class="lk">
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Age</th>
+                <th>Appointment Time</th>
+                <th>Contact Number</th>
+                <th>Diseases</th>
+                <th>Doctor Name</th>
+                <th>Patient Name</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+         
+            <tr th:each="dslList : ${ps}">
+                <td th:text="${dslList.id}"></td>
+                <td th:text="${dslList.age}"></td>
+                <td th:text="${dslList.appointmentTime}"></td>
+                <td th:text="${dslList.contactNumber}"></td>
+                <td th:text="${dslList.diseases}"></td>
+                <td th:text="${dslList.doctorName}"></td>
+                <td th:text="${dslList.patientName}"></td>
+                
+            </tr>
+        </tbody>
+    </table>
+ </div>
+</body>
+</html>

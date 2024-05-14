@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/patientnav.css}">
+    <title>Doctor Status</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+    background-color: #272f9cea;
+    color: whitesmoke;
+        }
+        /* Style for the table container */
+.tbody {
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for table headers */
+th {
+   
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for table cells */
+td {
+    padding: 8px;
+}
+
+
+/* Style for table header text */
+thead th {
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div th:include="pn::pn"></div>
+    <div class="tbody">
+        
+    <h1>Doctor Status</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Doctor Id</th>
+                <th>Doctor's Email</th>
+                <th>Specialist</th>
+                <th>Name</th>
+                <th>Time</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="dslList : ${dslList}">
+                <td th:text="${dslList.id}"></td>
+                <td th:text="${dslList.email}"></td>
+                <td th:text="${dslList.specialist}"></td>
+                <td th:text="${dslList.name}"></td>
+                <td th:text="${dslList.time}"></td>
+               
+
+            </tr>
+        </tbody>
+    </table>
+    </div>
+   
+</body>
+</html>

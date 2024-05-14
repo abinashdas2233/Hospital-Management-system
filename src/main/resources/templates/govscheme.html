@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/patientnav.css}">
+</head>
+<style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #272f9cea;
+    color: rgb(0, 0, 0);
+}
+
+.maincont{
+    
+    border: 4px solid black;
+    background-color: aliceblue;
+    display:  flex;
+    gap: 10px;
+    margin-top: 10%;
+   
+    
+}
+.cont1{
+    width: 40%;
+    display: flex;
+    border: 3px solid rgb(199, 233, 7);
+    margin-left: 5%;
+}
+.cont2{
+    width: 40%;
+    display: flex;
+    border: 3px solid rgb(199, 233, 7);
+    margin-left: 12%;
+}
+
+</style>
+<body>
+    <div th:include="pn::pn"></div>
+    <div class="maincont">
+        <div class="cont1">
+            <img src="ab.jpg" height="250" width="250">
+            <p>Ayushman Bharat is National Health Protection Scheme, which will cover over 10 crore poor and vulnerable families (approximately 50 crore beneficiaries) providing coverage upto 5 lakh rupees per family per year for secondary and tertiary care hospitalization. Ayushman Bharat - National Health Protection Mission will subsume the on-going centrally sponsored schemes - Rashtriya Swasthya Bima Yojana (RSBY) and the Senior Citizen Health Insurance Scheme (SCHIS)</p>
+
+        </div>
+        <div class="cont2">
+            <img src="bsky.webp" height="250" width="250">
+ 
+        <p>The Biju Swasthya Kalyan Yojana launched on 15th August, 2018 aims to provide Universal Health coverage, with special emphasis on the health protection of economically vulnerable families.Free health services for all (irrespective of income, status or residence) in all State Government health care facilities starting from Sub center level to Government Medical College and Hospitals and all Government Blood Bank level. All treatment is cashless and no document is required to be produced. </p>
+        </div>
+        
+    </div>
+</body>
+</html>
