@@ -43,8 +43,8 @@ body {
     width: 70%;
 }
 #formod{
-    width: 40%;
-    height: 68%;
+    width: 70%;
+    height: 72%;
    
     border: 2px solid rgba(0, 0, 0, 0.336);
     border-radius: 15px;
@@ -66,15 +66,16 @@ body {
 #ds{
    
     width: 70%;
-    margin: 10% auto;
+    margin: auto;
+   
 
 }
 form{
     
-    display: grid;
-    align-items: center;
-    justify-content: center;
+  display: block;
+
     width: 96%;
+    margin: auto;
 }
 input[type="text"],
 input[type="email"],
@@ -84,7 +85,7 @@ input[type="password"] ,input[type="number"]{
    padding: 10px;
     border: 2px solid #ccc;
     border-radius: 4px;
-    display: block; 
+  margin:auto;
     box-sizing: border-box; 
     border-radius: 8px;
 }
@@ -94,6 +95,7 @@ input[type="submit"]{
     border: none;
     width: 80px;
     margin: auto;
+    margin-left: 30%;
     letter-spacing: 2px;
     border-radius: 10px;
     padding: 10px;
@@ -115,7 +117,7 @@ input[type="submit"]:hover{
     color: whitesmoke;
     border: none;
     width: 100%;
-    margin: auto;
+    
     
     letter-spacing: 2px;
     border-radius: 10px;
@@ -135,4 +137,12 @@ input[type="radio"]{
     transform: scale(1.2); 
     accent-color: rgba(11, 150, 231, 0.699);
     cursor: pointer;
+}
+label{
+    font-size: small;
+    display: inline;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }

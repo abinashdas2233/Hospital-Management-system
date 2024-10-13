@@ -3,47 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" th:href="@{/index.css}">
-    <title>Registration Page</title>
+    <title>Create Account</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/reg.css}">
 </head>
 <body>
-    <div class="logo">
-        <img src="/logo.jpeg">
-
+  <div id="maincont">
+    <div id="mod1">
+        <img src="/log.png" id="lmg">
+       
+                
+        <img src="/dc.png" id="pns">
+        
     </div>
-    <div class="forml">
-        <form action="/regsub" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            <br>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" placeholder="Enter your age" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <br>
-            <label for="contactno">Contact no:</label>
-            <input type="number" id="contactno" name="contactno" placeholder="Enter your contact number" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            <br>
-            <label>Gender:</label>
-            <label for="male">Male</label>
-            <input type="radio" id="male" name="gender" value="male" required>
-            <label for="female">Female</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="transgender">Transgender</label>
-            <input type="radio" id="transgender" name="gender" value="transgender">
-            <br>
-            <label>Role:</label>
-            <label for="admin">Admin</label>
-            <input type="radio" id="admin" name="role" value="admin" required>
-            <label for="patient">Patient</label>
-            <input type="radio" id="patient" name="role" value="patient">
-            <br>
-            <input type="submit" name="submit">
-        </form>
+    <div id="mod2">
+        <div id="formod">
+            <div id="hdk">
+                <h1>Create Account</h1>
+            </div>
+           <div id="ds">
+            <form action="/regsub" method="post">
+               
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <br>
+              
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                <br>
+               
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <br>
+               
+                <input type="number" id="contactno" name="contactno" placeholder="Enter your contact number" required>
+                <br>
+            
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <br>
+               
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="transgender">Transgender</label>
+                <input type="radio" id="transgender" name="gender" value="transgender">
+                <br>
+               
+                <label for="admin">Admin</label>
+                <input type="radio" id="admin" name="role" value="admin" required>
+                <label for="patient">Patient</label>
+                <input type="radio" id="patient" name="role" value="patient">
+                <br>
+                <input type="submit" name="submit">
+            </form>
+           </div>
+        </div>
+     
     </div>
+  </div>
 </body>
 </html>

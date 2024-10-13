@@ -2,6 +2,7 @@ package com.example.hello_doctor.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -27,7 +28,7 @@ public class usercontroller {
         }
     }
     @PostMapping("/logsub")
-    public String userlogin(user u){
+    public String userlogin(Model model ,user u){
         String enteredemail=u.getEmail();
         
         String enteredpassword=u.getPassword();
@@ -52,5 +53,6 @@ public class usercontroller {
        }
         
     }
+    
 
 }

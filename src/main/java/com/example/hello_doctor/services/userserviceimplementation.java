@@ -1,6 +1,7 @@
 package com.example.hello_doctor.services;
 
 import java.security.MessageDigest;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -52,6 +53,12 @@ userrepository urepo;
         user ds=urepo.findByEmail(email);
         String result=ds.getRole();
         return result;
+    }
+    @Override
+    public List<user> fetchdoctor() {
+        // TODO Auto-generated method stub
+
+        return urepo.findByRoleName("Doctor");
     }
     
     

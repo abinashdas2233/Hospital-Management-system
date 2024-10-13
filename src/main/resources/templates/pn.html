@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" th:href="@{/patientnav.css}">
-    <title>Document</title>
+    <title>Home</title>
     
 </head>
 
-<body>
-    <div class="hk" id="fragmenttag" th:fragment="pn">
-        <div class="logo">
-            <img src="/logo.jpeg">
-        </div>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="/sk">Home</a></li>
-                    <li><a href="/bk">Book Appointment</a></li>
-                    <li><a href="/gs">Govt.Scheme</a> </li>
-                    <li><a href="/ds">Doctor Status</a></li>
-                    
-                    <li><a href="/logoutd">Logout</a></li>
-                </ul>
-            </nav>
-         </div>
+<body  id="fragmenttag" th:fragment="pn">
+    <div class="hk">
+     <div id="logoi">
+        <img src="/ml.png">
+     </div>
+     <nav>
+        <ul>
+            <li><a href="/sk">Home</a></li>
+            <li><a href="/ds">Doctor Status</a></li>
+            <li><a href="/bk">Book Appointment</a></li>
+            <li><a href="/gs">Govt.Scheme</a> </li>
+           
+            
+            <li><a href="/logoutd">Logout</a></li>
+        </ul>
+
+     </nav>
     </div>
 </body>
 </html>

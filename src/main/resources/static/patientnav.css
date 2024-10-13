@@ -1,36 +1,59 @@
-body, ul {
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+.hk{
+    height: 70px;
+width: 100vw;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  
+    position: fixed;
+    display: flex;
+}
+#logoi{
+    height: 100%;
+    width: 10%;
+   
+}
+#logoi img{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    background-color: rgb(204, 15, 188);
+    height: 52%;
+    width: 72%;
+    margin: auto;
+    border-radius: 30px;
+    padding-bottom: 2px;
     
 }
-
-.logo img {
-    width: 100px;
-    height: 20%;
+ul{
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    margin: 1% auto ;
 }
-
-.container {
-    background-color: #d6d32d;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 10px 20px;
+li{
     text-decoration: none;
-    color: #333;
-}
+    list-style: none;
+    text-align: center;
+    font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: medium;
 
-nav ul li a:hover {
-    background-color: #ccc;
-    color: #fff;
+    
+    
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:hover{
+    
+    color: black;
+    
 }

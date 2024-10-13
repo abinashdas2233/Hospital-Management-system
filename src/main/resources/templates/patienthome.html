@@ -5,31 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" th:href="@{/patientnav.css}">
     <title>Home page</title>
-    <style>
-     body {
-    font-family: Arial, sans-serif;
-    background-color: #272f9cea;
-}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Updock&display=swap');
+    body{
+        background-color: rgba(34, 34, 34, 0.808);
+    }
+    
+    
+    #maincont{
+      
+        margin-top: 8%;
+        display: flex;
+        height: 533px;
+    }
+    #sub11{
+        height: 100%;
+        width: 50%;
+     
+        text-align: center;
+       
+        
+    }
+    #sub12{
+        height: 100%;
+        width:50%;
+        
+        display: flex;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: whitesmoke;
+    
+    }
+    #sub121{
+        margin-top: 20%;
+    }
+    #sub121 h1{
+        color: red;
+        font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    }
+    #sub121 h2{
+        color: yellow;
+        font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    }
+    #sub11 h3{
+        color: whitesmoke;
+        font-family: "Updock", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+    }
+    #sub11 button{
+        background-color: red;
+        color: whitesmoke;
+        border-radius: 10px;
+        border: none;
+        height: 30px;
+    }
+    #txt{
+        height: 100%;
+        width: 30%;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-family: "Updock", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+  margin-top: 10%;
+    }
+    #ims img{
+        width: 100%;
+        height: 100%;
+    }
+    .contain{
+        height: 400px;
+        width: 100%;
+        margin-top: 2%;
+      display: flex;
+    }
+    #so11{
+        width: 50%;
+        height: 100%;
+        background-color: chocolate;
+       
+    }
+    #so12{
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        color: white;
+        font-weight: 500;
+    }
 
-
-.ani {
-    margin-top: 12%;
-    padding-bottom: 75px;
-    padding-left: 40px;
-
-    margin-left: 20%;
+    .ani {
+  
+    
     animation-name: kan;
     animation-duration: 20s; 
    
-    border-radius: 4px ;
+  
 
     
     animation-iteration-count: infinite; 
-    position: fixed;
+   
     top: 0; 
     left: 0; 
-    width: 50%; 
-    height: 50%; 
+    width: 100%; 
+    height: 100%; 
 }
 
 @keyframes kan {
@@ -37,55 +123,171 @@
         background-image: url('/a1.webp');
         background-repeat:no-repeat;
         background-size: cover;
-        border: 10px solid red;
-       ;
+        background-position: center;
     }
     30% {
         background-image: url('/a2.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
-        border: 10px solid rgb(255, 208, 0);
+       background-position: center;
         
     }
     50% {
         background-image: url('/a3.jpg');
-        border: 10px solid rgb(47, 0, 255);
-        
-    background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+       background-position: center;
+     
     }
     70% {
         background-image: url('/a4.jpeg');
         background-repeat: no-repeat;
-
-        border: 10px solid rgb(0, 140, 255);
-    
-    background-size: cover;
+        background-size: cover;
+       background-position: center;
     }
     100% {
         background-image: url('/a5.jpg');
-        border: 10px solid rgb(36, 3, 3);
         background-repeat: no-repeat;
-       
-    background-size: cover;
+        background-size: cover;
+       background-position: center;
     }
 }
+#us{
+    height: 80%;
+    width: 50%;
+    margin: auto;
+   
+  
+    color: white;
+    font-weight: 500;
+}
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    margin-top: 4%;
+}
 
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
 
-    
-    </style>
+.footer-info, .footer-links, .footer-contact {
+    width: 30%;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+</style>
 </head>
 <body>
     <!-- Include navbar -->
-    <div th:include="pn::pn"></div>
-
-    <!-- Your home page content -->
-    <div class="contain">
-        <div class="ani">
-
+    <div th:include="pn::pn">
+        
+    </div>
+   
+    <div id="maincont">
+        <div id="sub11">
+         <div id="sub121">
+            <h1>WELCOME TO </h1>
+            <h2>MEDICARE</h2>
+         </div>
+            <h3>Book Appointment with Doctors as per your Choice !</h3>
+            <button>Book Appointment</button>
+            
+        </div>
+        <div id="sub12">
+            <div id="txt">
+                <p>“In our job, you will never go home at the end of the day thinking that you haven’t done something valuable and important.”</p>
+            </div>
+            <div id="ims">
+                <img src="/dc2.png">
+            </div>
         </div>
 
+    </div>
+    <div class="contain">
+        
+<div id="so11">
+    <div class="ani">
 
     </div>
+</div>
+<div id="so12">
+    <div id="sl2">
+        <h1>Why Choose Medicare?</h1>
+    </div>
+    <div id="us">
+        <div class="s4">
+            <h1>100+</h1>
+            <p>Beds</p>
+        </div>
+        <div class="s4"><h1>50+</h1>
+        <p>Doctor's</p></div>
+        <div class="s4">
+            <h1>100+</h1>
+            <p>Pharmacies</p>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>About Us</h3>
+                <p>Providing quality healthcare services to our community.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@hospital.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MediCare. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    
     
 </body>
 </html>

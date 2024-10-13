@@ -7,20 +7,40 @@
     <link rel="stylesheet" type="text/css" th:href="@{/index.css}">
 </head>
 <body>
-    <div class="logo">
-        <img src="/logo.jpeg">
+  <div id="maincont">
+    <div id="mod1">
+        <img src="/log.png" id="lmg">
+       
+                
+        <img src="/dc.png" id="pns">
+        
     </div>
-    <div class="forml">
-        <form action="/logsub" method="post">
-            <label>E-mail</label>
-            <input type="email"  name="email" id="email" placeholder="enter your email" required>
-            <br>
-            <label>Password-</label>
-            <input type="password" name="password" id="password" placeholder="enter your password" required>
-            <br>
-            <input type="submit" value="login">
-         </form>
-        <a href="/regi">Click here to register</a>
+    <div id="mod2">
+        <div id="formod">
+            <div id="hdk">
+                <h1>LogIn</h1>
+            </div>
+           <div id="ds">
+            <form action="/logsub" method="post">
+                
+
+                <input type="email"  name="email" id="email" placeholder="Enter Your Email" required>
+                <br>
+               
+                <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+                <br>
+               
+                <a class="lk" href="#">forget password?</a>
+                
+                <input type="submit" value="login">
+                <a href="/regi" id="ls">Create Account</a>
+              
+             </form>
+           
+           </div>
+        </div>
+     
     </div>
+  </div>
 </body>
 </html>
