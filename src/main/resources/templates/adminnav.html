@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/patientnav.css}">
+    <title>Home</title>
     
 </head>
 
-<body>
-    <div class="uk" id="fragment" th:fragment="adminnav">
-        <div class="logo">
-            <img src="/logo.jpeg">
-        </div>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="/duk">Home</a></li>
-                    <li><a href="/cps">Check patient status</a></li>
-                    <li><a href="/add">Add Doctor</a> </li>
-                    <li><a href="/ds">Doctor Status</a></li>
-                    <li><a href="/logoutd">Logout</a></li>
-                </ul>
-            </nav>
-         </div>
+<body  id="fragmenttag" th:fragment="adminnav">
+    <div class="hk">
+     <div id="logoi">
+        <img src="/ml.png">
+     </div>
+     <nav>
+        <ul>
+            <li><a href="/duk">Home</a></li>
+            <li><a href="/cps">Check patient status</a></li>
+            <li><a href="/add">Add Doctor</a> </li>
+            <li><a href="/logoutd">Logout</a></li>
+        </ul>
+
+     </nav>
     </div>
 </body>
 </html>
