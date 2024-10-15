@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Failed</title>
+    <link rel="icon" type="text/image" th:href="@{/ml.png}">
     <style>
         body {
     font-family: Arial, sans-serif; 
@@ -32,7 +33,12 @@ a:hover {
 </head>
 <body>
   <div class="hk">
-    email already exist <a href="/regi">click here to try with another email id</a>
+    Email Alreay Exist<button onclick="handle()">click here to go back </button>
   </div>
+  <script>
+    function handle(){
+        window.history.back();
+    }
+  </script>
 </body>
 </html>

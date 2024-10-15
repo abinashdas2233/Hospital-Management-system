@@ -28,6 +28,13 @@ public class appointmentservicesimplementation implements appointmentservices {
         return arepo.findAll();
     }
 
+    @Override
+    public List<appointment> finddoctor(String name) {
+        // TODO Auto-generated method stub
+      return  arepo.findByDoctorName(name);
+    }
+    
+
     
     
     

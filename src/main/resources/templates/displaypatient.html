@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" th:href="@{/patientnav.css}">
-    <title>Admin Control</title>
+    <title>Display Patient</title>
     <link rel="icon" type="text/image" th:href="@{/ml.png}">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
@@ -30,6 +30,7 @@
     height: 100%;
     margin: auto;
     text-align: center;
+    overflow: auto;
     
 }
 .sub form{
@@ -130,6 +131,11 @@ label{
   font-weight: 500;
   font-style: normal;
 }
+table{
+    margin: auto;
+    border-spacing: 15px 10px;
+}
+
     </style>
 </head>
 <body>
@@ -138,15 +144,27 @@ label{
     <div th:include="adminnav::adminnav"></div>
  <div class="lk">
  <div class="sub">
-    <h1> Dear Doctors ! Know Your Patient</h1>
-    <form action="/preq" method="post">
-        <select name="doctorName">
-            <option   disabled selected>--Select Your Name---</option>
-             <option th:each="i:${ps}" th:value="${i.name}" th:text="${i.name}"></option>>
-           </select>
-           <br>
-           <input type="submit">
-      </form>
+  <table >
+    <thead>
+
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Appointment Time</th>
+        <th>Diseases</th>
+        <th>Contact Number </th>
+      
+    </thead>
+    <tbody>
+        <tr th:each="i : ${uk}">
+            <td th:text="${i. patientName}"></td>
+            <td th:text="${i.age}"></td>
+            <td th:text="${i.appointmentTime}"></td>
+            <td th:text="${i.diseases}"></td>
+            <td th:text="${i.contactNumber}"></td>
+           
+        </tr>
+    </tbody>
+  </table>
  </div>
  
  </div>
@@ -204,7 +222,7 @@ label{
         <input type="text" id="specialist" name="specialist" placeholder="Enter specialist" required>
         <br>
       
-        <input type="time" id="time" name="time" placeholder="hour/minute-hour/minute" required>
+        <input type="text" id="time" name="time" placeholder="hour/minute-hour/minute" required>
         <br>
         <input type="submit" name="submit">
     </form>

@@ -18,7 +18,7 @@ public class doctorcontroller {
     @PostMapping("/dsk")
     public String doctorschedule(Doctor d){
         String ms=dsr.doctorsch(d);
-        return "doctorschedule";
+        return "patientstatus";
     }
     @GetMapping("/ds")
     public String getds(Model model){

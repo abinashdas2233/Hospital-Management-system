@@ -53,6 +53,29 @@ public class usercontroller {
        }
         
     }
+    @PostMapping("/fgps")
+    public String password(user u){
+        try {
+            String email = u.getEmail();
+            String role = u.getRole();
+            String previousIdOrPassword = u.getGender();
+            String newPassword = u.getPassword();
+            
+            System.out.println(email + "  " + role + "  " + previousIdOrPassword + "  " + newPassword);
     
+            if (role.equals("id")) {
+                int id = Integer.parseInt(previousIdOrPassword);
+                usr.byid(id, email, newPassword);
+            } else {
+                usr.bypassword(previousIdOrPassword, email, newPassword);
+            }
+    
+            return "index";  
+        } catch (RuntimeException e) {
+            
+           
+            return "pwfail";  // Redirect to error page
+        }
+    }
 
 }

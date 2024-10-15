@@ -62,4 +62,8 @@ public String adddoctor(){
 public String pagenav(){
     return "doctorschedule";
 }
+@GetMapping("/fdw")
+public String forgetpwnav(){
+    return  "forgetpassword";
+}
 }

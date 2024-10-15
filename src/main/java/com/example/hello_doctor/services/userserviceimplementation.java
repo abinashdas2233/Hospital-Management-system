@@ -60,6 +60,40 @@ userrepository urepo;
 
         return urepo.findByRoleName("Doctor");
     }
+    @Override
+    public void byid(int id, String email,String cpw) {
+        // TODO Auto-generated method stub
+        user u = urepo.findByEmail(email);
+        if (u == null) {
+            throw new RuntimeException("User not found with the provided email.");
+        }
+    
+        if (u.getId() != id) {
+            throw new RuntimeException("ID doesn't match.");
+        }
+    
+        u.setPassword(cpw); 
+        urepo.save(u);
+    }
+    @Override
+    public void bypassword(String ipw, String email,String cpw) {
+        // TODO Auto-generated method stub
+        user u = urepo.findByEmail(email);
+        if (u == null) {
+            throw new RuntimeException("User not found with the provided email.");
+        }
+    
+        String dbPassword = u.getPassword();
+        if (!dbPassword.equals(ipw)) {
+            throw new RuntimeException("Previous password doesn't match.");
+        }
+    
+        u.setPassword(cpw); 
+        urepo.save(u);
+
+        
+    }
+    
     
     
     
